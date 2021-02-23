@@ -1,0 +1,27 @@
+O Dataset consiste em 409 linhas e 8 colunas de tipos variados.
+
+0) Apelido - Nickname da pessoa que postou.
+1) Username - Usuário da pessoa que postou.
+2) Data/Hora - Data e Hora da postagem.
+3) Respondendo - Caso o tweet seja uma resposta a outro tweet, este campo indica a quem foi. Se não for, o texto do tweet é armazenado neste campo.
+4) Texto - Texto do tweet caso tenha sido uma resposta. Caso o tweet não seja uma resposta, esse campo fica vazio ou com o texto do link caso possua.
+5) link_img - Link da imagem postada no tweet caso exista.
+6) Comentarios - Número de comentários do tweet.
+7) Retweets - Número de retweets do tweet.
+8) Likes - Número de likes do tweet.
+
+
+Tipos: 
+
+0) Apelido - object
+1) Username - object
+2) Data/Hora - object
+3) Respondendo - object
+4) Texto - object
+5) link_img - object
+6) Comentarios - float64
+7) Retweets - object
+8) Likes - object
+
+Quando o  tweet passa de mil comentários, ou retweets ou likes,o campo é escrito na forma ex: "4,2 Mil".
+Dessa forma, deixa de ser float64 e passa a ser objeto. Apenas o campo comentários não está object pois não há tweets com mais de mil comentários.
